@@ -1,0 +1,33 @@
+<!-- 2. When the button is clicked, change the text of the paragraph to "Button clicked!". -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change In Paragraph</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        #btn{
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <p id="p">Parth Patel</p>
+        <button type="button" id="btn">Click Me</button>
+        <script>
+            $(document).ready(function(){
+                $("#btn").click(function(){
+                    $("#p").text("Button clicked!");
+                });
+            });
+        </script>
+    </center>
+</body>
+</html>

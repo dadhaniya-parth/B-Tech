@@ -1,0 +1,24 @@
+<!-- 2. WAP to read an array from the user and sort them in ascending order. (A) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Array</title>
+</head>
+<body>
+    <h1>Sorting Of Array</h1>
+    <script>
+        let myArray=[]
+        let size = parseInt(prompt("Enter Size Of Array:"))
+
+        for (let i = 0; i < size; i++) {
+            myArray[i] = prompt(`Please Enter ${i}s value:`)
+        }
+        document.write(`Original Array is:${myArray}`)
+        document.write("<br>")
+        document.write(`Sorted Array is:${myArray.sort()}`)
+    </script>
+</body>
+</html>

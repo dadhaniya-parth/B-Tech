@@ -1,0 +1,106 @@
+<!-- 4. Write a JavaScript program to validate user data given from the HTML form(C) -->
+<!-- 1) username must be of minimum 8 characters
+ 2) password must contain at least 1 digit and 1 special character and should be
+ between 8-12 characters
+ 3) password and repeat password must be same
+ 4) age must be greater than 18 (calculate from date of birth)
+ 5) enrollment must be of 11 digits
+ 6) email validation -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+
+<body>
+    <form id="registrationForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <label for="repeatPassword">Repeat Password:</label>
+        <input type="password" id="repeatPassword" name="repeatPassword"><br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob"><br><br>
+
+        <label for="enrollment">Enrollment Number:</label>
+        <input type="text" id="enrollment" name="enrollment"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <button type="button" onclick="validateForm()">Submit</button>
+
+        <p id="errorMessages"></p>
+    </form>
+
+    <script>
+        function validateForm() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const repeatPassword = document.getElementById("repeatPassword").value;
+            const dob = document.getElementById("dob").value;
+            const enrollment = document.getElementById("enrollment").value;
+            const email = document.getElementById("email").value;
+            let errorMessages = "";
+
+            if (username.length < 8) {
+                errorMessages += "Username must be at least 8 characters long.<br>";
+            }
+
+            const passwordRegex = /^(?=.*\d)(?=.*[\W_]).{8,12}$/;
+            if (!passwordRegex.test(password)) {
+                errorMessages += "Password must be 8-12 characters long, contain at least 1 digit and 1 special character.<br>";
+            }
+
+            if (password !== repeatPassword) {
+                errorMessages += "Password and repeat password do not match.<br>";
+            }
+
+            const age = calculateAge(dob);
+            if (age < 18) {
+                errorMessages += "You must be at least 18 years old.<br>";
+            }
+
+            const enrollmentRegex = /^\d{12}$/;
+            if (!enrollmentRegex.test(enrollment)) {
+                errorMessages += "Enrollment number must be exactly 12 digits.<br>";
+            }
+
+            if (!validateEmail(email)) {
+                errorMessages += "Please enter a valid email.<br>";
+            }
+
+            const errorElement = document.getElementById("errorMessages");
+            if (errorMessages) {
+                errorElement.innerHTML = errorMessages;
+                errorElement.style.color = "red";
+            } else {
+                errorElement.innerHTML = "Form submitted successfully!";
+                errorElement.style.color = "green";
+            }
+        }
+
+        function calculateAge(dob) {
+            const birthDate = new Date(dob);
+            const diff = Date.now() - birthDate.getTime();
+            const ageDate = new Date(diff);
+            return Math.abs(ageDate.getUTCFullYear() - 1970);
+        }
+
+        function validateEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+    </script>
+</body>
+
+</html>

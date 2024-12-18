@@ -1,0 +1,36 @@
+<!-- 5. Write a JavaScript that uses a loop that searches a word in sentence held in an array,
+returning the index of the word. (C) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search an Index</title>
+</head>
+
+<body>
+    <script>
+        let sentence = prompt("enter Any Sentence:")
+        let arr = []
+        arr = sentence.split(" ")
+        let word = prompt("Enter the word to search")
+        let index = findWordIndex(arr, word)
+        if (index !== -1) {
+            document.write(`The word was found at index ${index}.`);
+        } else {
+            document.write(`The word was not found in the array.`);
+        }
+        function findWordIndex(array, word) {
+            const lowerCaseArray = array.map(element => element.toLowerCase());
+            const lowerCaseWord = word.toLowerCase();
+
+            const index = lowerCaseArray.findIndex(element => element === lowerCaseWord);
+
+            return index;
+        }
+    </script>
+</body>
+
+</html>

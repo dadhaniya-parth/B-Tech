@@ -1,0 +1,38 @@
+<!-- 2. Create an HTML file with a button element and an empty paragraph element. Use jQuery to write a script that listens for a click event on the button. (A) -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Click Event</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        #myButton{
+            position: relative;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #myButton:hover{
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <button id="myButton">Click me!</button>
+    <p id="myParagraph"></p>
+
+    <script>
+        $(document).ready(function() {
+            $("#myButton").click(function() {
+                $("#myParagraph").text("You clicked the button!");
+            });
+        });
+    </script>
+</body>
+</html>

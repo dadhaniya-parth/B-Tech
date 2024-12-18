@@ -1,0 +1,31 @@
+<!-- WAP to display Faculties stored in array. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-1</title>
+</head>
+<body>
+    <script>
+       
+let faculties = [
+    { name: "ANS", salary: 40000, age: 35 },
+    { name: "NHA", salary: 60000, age: 30 },
+    { name: "CNK", salary: 80000, age: 55 },
+    { name: "VKM", salary: 50000, age: 40 }
+];
+
+
+for (let i = 0; i < faculties.length; i++) {
+    document.write(`Faculty ${i + 1}:`,'<br>');
+    document.write(`Name: ${faculties[i].name}`,'<br>');
+    document.write(`Salary: ${faculties[i].salary}`,'<br>');
+    document.write(`Age: ${faculties[i].age}`,'<br>');
+    document.write('------------------------------------','<br>');
+}
+
+    </script>
+</body>
+</html>

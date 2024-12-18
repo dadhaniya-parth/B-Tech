@@ -1,0 +1,21 @@
+<!-- Demonstrate the Arrow functions. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arrow Function Example</title>
+</head>
+<body>
+    <h1>Arrow Functions in JavaScript</h1>
+    <p id="output"></p>
+
+    <script>
+        const addArrow = (a, b) => a + b;
+
+        let resultArrow = addArrow(5, 3);  
+
+        let output = document.getElementById("output");
+        output.innerHTML = `Arrow function result : ${resultArrow}`;
+    </script>
+</body>
+</html>

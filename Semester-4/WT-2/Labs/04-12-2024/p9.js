@@ -1,0 +1,1 @@
+// Check the whether the given number is Armstrong or not.

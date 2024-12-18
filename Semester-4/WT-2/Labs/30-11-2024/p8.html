@@ -1,0 +1,31 @@
+<!-- WAP to display students stored in array. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-1</title>
+</head>
+<body>
+    <script>
+       
+let students = [
+    { name: "Parth", rollNumber: 120, age: 20 },
+    { name: "Vivek", rollNumber: 121, age: 19 },
+    { name: "Vansh", rollNumber: 122, age: 19 },
+    { name: "Shubham", rollNumber: 123, age: 19 }
+];
+
+
+for (let i = 0; i < students.length; i++) {
+    document.write(`Student ${i + 1}:`,'<br>');
+    document.write(`Name: ${students[i].name}`,'<br>');
+    document.write(`Roll Number: ${students[i].rollNumber}`,'<br>');
+    document.write(`Age: ${students[i].age}`,'<br>');
+    document.write('------------------------------------','<br>');
+}
+
+    </script>
+</body>
+</html>

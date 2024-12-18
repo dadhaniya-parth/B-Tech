@@ -1,0 +1,46 @@
+--PRACTICAL-2--
+--PART=C--
+
+CREATE TABLE ACCOUNT1(ACTNO INT, CNAME VARCHAR(50),BNAME VARCHAR(50), AMOUNT DECIMAL(8,2), ADATE DATE);
+
+INSERT INTO ACCOUNT1 VALUES (101,'ANIL','VRCE',1000,'1995-03-01');
+INSERT INTO ACCOUNT1 VALUES (102,'SUNIL','AJNI',5000,'1996-01-04');
+INSERT INTO ACCOUNT1 VALUES (103,'MEHUL','KAROLBAGH',3500,'1995-11-17');
+INSERT INTO ACCOUNT1 VALUES (104,'MADHURI','CHANDI',1200,'1995-12-17');
+INSERT INTO ACCOUNT1 VALUES (105,'PRMOD','M.G. ROAD',3000,'1996-03-27');
+INSERT INTO ACCOUNT1 VALUES (106,'SANDIP','ANDHERI',2000,'1996-03-31');
+INSERT INTO ACCOUNT1 VALUES (107,'SHIVANI','VIRAR',1000,'1995-09-05');
+INSERT INTO ACCOUNT1 VALUES (108,'ANIKRANTIL','NEHRU PLACE',5000,'1995-07-05');
+INSERT INTO ACCOUNT1 VALUES (109,'MINU','POWAI',7000,'1995-03-10');
+
+SELECT * FROM ACCOUNT1;
+
+--1. Display the Cname whose Bname is either AJNI or CHANDI and amount is greater than 3000 and sort the result in ascending order by their amount and if amount is same then in descending order by cname.
+SELECT CNAME FROM ACCOUNT1 WHERE BNAME IN('AJNI','CHANDI') AND AMOUNT>3000 ORDER BY AMOUNT, CNAME DESC;
+
+--2. Retrieve top 3 unique BNAME and sort them in ascending order on BNAME.
+SELECT DISTINCT TOP 3 BNAME FROM ACCOUNT1 ORDER BY BNAME;
+
+--3. Display the Cname whose ACTNO is greater than 103 and sort the result in ascending order by their amount and if amount is same then in descending order by cname.
+SELECT CNAME FROM ACCOUNT1 WHERE ACTNO>103 ORDER BY AMOUNT, CNAME DESC;
+
+--4. Update the BNAME of Anil, Mehul and Shivani to NULL.
+UPDATE ACCOUNT1 SET BNAME=NULL WHERE CNAME IN('ANIL','MEHUL','SHIVANI');
+
+--5. Display the Cname of customers whose Bname is NULL.
+SELECT CNAME FROM ACCOUNT1 WHERE BNAME IS NULL;
+
+--6. Update the amount of Anil to 5000.
+UPDATE ACCOUNT1 SET AMOUNT=5000 WHERE CNAME='ANIL';
+
+--7. Update amount of actno 109 to NULL.
+UPDATE ACCOUNT1 SET AMOUNT=NULL WHERE ACTNO=109;
+
+--8. Retrieve all the records of account table as per their bname in descending order.
+SELECT * FROM ACCOUNT1 ORDER BY BNAME DESC;
+
+--9. Delete all the records of Account table. (Use Truncate)
+TRUNCATE TABLE ACCOUNT1;
+
+--10. Remove Account table. (Use Drop)
+DROP TABLE ACCOUNT1;

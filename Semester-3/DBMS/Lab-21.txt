@@ -1,0 +1,35 @@
+----- Lab-21 -----
+----- PART-1 -----
+use Lab_17
+
+switched to db Lab_17
+
+//1. Display distinct city.
+db.EMPLOYEE.distinct("CITY")
+
+//2. Display city wise number of persons.
+db.EMPLOYEE.aggregate([{$group: {_id:"$CITY",TotalNoPerson: {$sum:1}}}])
+
+// 3. Display sum of salary in your collection.
+db.EMPLOYEE.aggregate([{$group : {_id:null,TotalSalary:{$sum:'$SALARY'}}}])
+
+//4. Display average of salary in your document.
+db.EMPLOYEE.aggregate([{$group : {_id:null,AverageSalary:{$avg:'$SALARY'}}}])
+
+// 5. Display maximum and minimum salary of your document.
+db.EMPLOYEE.aggregate([{$group : {_id:null,MaxSalary:{$max:'$SALARY'},MinSalary:{$min:'$SALARY'}}}])
+
+//6. Display city wise total salary in your collection.
+db.EMPLOYEE.aggregate([{$group : {_id:"$CITY",SumOfSalary:{$sum:"$SALARY"}}}])
+
+// 7. Display gender wise maximum salary in your collection.
+db.EMPLOYEE.aggregate([{$group : {_id:"$GENDER",MaxOfSalary:{$max:"$SALARY"}}}])
+
+// 8. Display city wise maximum and minimum salary.
+db.EMPLOYEE.aggregate([{$group : {_id:"$CITY",MaxSalary:{$max:'$SALARY'},MinSalary:{$min:'$SALARY'}}}])
+
+// 9. Display count of persons lives in Sydney city in your collection.
+db.EMPLOYEE.aggregate([{ $match: { CITY: "Sydney" } },{ $group: { _id: "$CITY", count: { $sum: 1 } } }])
+
+// 10. Display average salary of New York city.
+db.EMPLOYEE.aggregate([{ $match: { CITY: "Sydney" } },{ $group: { _id: "$CITY", count: { $sum: 1 } } }])

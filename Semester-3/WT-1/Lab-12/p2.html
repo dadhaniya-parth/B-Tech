@@ -1,0 +1,26 @@
+<!-- 2. WAP to recognize which mouse event is fired. (A) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+</head>
+<body>
+    <center>
+    <button id="mousedemo">Mouse Effects</button>
+    <p id="text"></p>
+    <script>
+        let mdemo = document.getElementById("mousedemo")
+        mdemo.addEventListener("click", mouseDemo)
+        mdemo.addEventListener("dblclick", mouseDemo)
+        mdemo.addEventListener("mouseenter", mouseDemo)
+        mdemo.addEventListener("mouseout", mouseDemo)
+        function mouseDemo(event){
+            document.getElementById('text').innerText=event.type
+        }
+    </script>
+    </center>
+</body>
+</html>

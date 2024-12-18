@@ -1,0 +1,101 @@
+<!-- 2. WAP to display students stored in array. (A) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>students Details</title>
+    <style>
+        img {
+            height: 350px;
+            width: 350px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 25px;
+        }
+
+        .card {
+            margin: 7px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <script>
+            let students = [
+                {
+                    StudentID: 1,
+                    StudentName: "ARTIBEN VAGHELIYA",
+                    StudentCourse: "CSE",
+                    StudentYear: "2023",
+                    StudentEnrollment: "200540107079",
+                    StudentImage: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Student-Photo/200540107079---17-10-2023-08-30-52.JPG"
+                },
+                {
+                    StudentID: 2,
+                    StudentName: "PRINCEGIRI GOSWAMI",
+                    StudentCourse: "CSE",
+                    StudentYear: "2023",
+                    StudentEnrollment: "200540107078",
+                    StudentImage: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Student-Photo/200540107078---14-10-2023-11-30-59.JPG"
+                },
+                {
+                    StudentID: 3,
+                    StudentName: "HARSHVI GHELANI",
+                    StudentCourse: "CSE",
+                    StudentYear: "2023",
+                    StudentEnrollment: "200540107073",
+                    StudentImage: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Student-Photo/200540107073---19-05-2023-03-29-29.JPG"
+                },
+                {
+                    StudentID: 4,
+                    StudentName: "UTSAV BUSA",
+                    StudentCourse: "CSE",
+                    StudentYear: "2023",
+                    StudentEnrollment: "200540107202",
+                    StudentImage: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Student-Photo/200540107202---17-10-2023-09-11-15.JPG"
+                },
+                {
+                    StudentID: 5,
+                    StudentName: "YASH DAXINI",
+                    StudentCourse: "CSE",
+                    StudentYear: "2023",
+                    StudentEnrollment: "200540107113",
+                    StudentImage: "https://du-website.s3.ap-south-1.amazonaws.com/U01/Student-Photo/200540107113---17-10-2023-08-54-03.JPG"
+                },
+            ]
+            for(stu of students){
+            document.write('<div class="card">')
+            document.write('<img src="'+stu.StudentImage+'"></img>')
+            document.write('<div class="card-body">')
+            document.write('<h5 class="card-title">'+stu.StudentName+'</h5>')
+            document.write('<p class="card-text">'+"Course:"+stu.StudentCourse+'</p>');
+            document.write('<p class="card-text">'+"Year:"+stu.StudentYear+'</p>');
+            document.write('<p class="card-text">'+stu.StudentEnrollment+'</p>');
+            document.write('</div>');
+            document.write('</div>');
+        }
+        </script>
+    </div>
+</body>
+
+</html>

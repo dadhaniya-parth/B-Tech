@@ -1,0 +1,29 @@
+<!-- 5. WAP to demonstrate change in properties of HTML element using JavaScript. (A) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Properties</title>
+</head>
+<body>
+    <h1 id="myHeading">This is a heading</h1>
+    <p id="myParagraph">This is a paragraph.</p>
+    <button id="changeButton">Change Properties</button>
+    <script>
+        document.getElementById("changeButton").addEventListener("click", function() {
+            var heading = document.getElementById("myHeading");
+            var paragraph = document.getElementById("myParagraph");
+
+            heading.textContent = "Modified Heading";
+            heading.style.color = "red";
+            heading.style.fontSize = "24px";
+
+            paragraph.innerHTML = "<b>This is a modified paragraph.</b>";
+            paragraph.style.backgroundColor = "yellow";
+            paragraph.style.textAlign = "center";
+        });
+    </script>
+</body>
+</html>

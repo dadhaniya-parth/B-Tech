@@ -1,0 +1,43 @@
+<!-- Demonstrate different array functions like push, pop, shift, unshift, splice, sort etc... -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Functions</title>
+</head>
+
+<body>
+    <script>
+        let myArray = [1, 2, 3, 4, 5];
+        console.log("Original Array:",myArray);
+
+        myArray.push(6);
+        console.log("Push():",myArray);
+        document.write("Push():"+myArray+'<br>');
+
+        myArray.pop();
+        console.log("Pop():",myArray)
+        document.write("Pop():"+myArray+'<br>');
+
+        myArray.shift();
+        console.log("shift():",myArray);
+        document.write("shift():"+myArray+'<br>');
+
+        myArray.unshift(0);
+        console.log("unshift():",myArray); 
+        document.write("unshift():"+myArray+'<br>');
+
+        myArray.splice(2, 2, 10, 11);
+        console.log("splice():",myArray); 
+        document.write("splice():"+myArray+'<br>');
+
+        myArray.sort();
+        console.log("sort():",myArray); 
+        document.write("sort():"+myArray+'<br>');
+    </script>
+</body>
+
+</html>

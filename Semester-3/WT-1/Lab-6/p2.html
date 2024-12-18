@@ -1,0 +1,70 @@
+<!-- 2. Write an HTML snippet with CSS for following effects: (B)
+a. Link after visited red color before visited orange color
+b. Add special style(change color,font size etc) to first line of paragraph
+c. Add special style (change color,font size etc) to first letter of paragraph
+d. Change background color to yellow when user select particular text
+e. Add special style to an element when user mouse over it. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSUDO</title>
+    <style>
+        /* unvisited link */
+        a:link {
+            color: red;
+        }
+
+        /* visited link */
+        a:visited {
+            color: green;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: hotpink;
+        }
+
+        /* selected link */
+        a:active {
+            color: blue;
+        }
+        .p1::first-line {
+            background-color: yellow;
+            font-size: larger;
+            color: orangered;
+        }
+        .p2::first-letter {
+            font-size: 200%;
+            color: red;
+        }
+        ::-moz-selection { /* Code for Firefox */
+            color: white;
+            background: black;
+        }
+
+        ::selection {
+            color: white;
+            background: black;
+        }
+        .h1:hover{
+            color: white;
+            background-color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <h2>Styling a link depending on state</h2>
+
+    <b><a href="default.asp" target="_blank">This is a link</a></b>
+    <p class="p1">To stop the degradation of the planet's natural environment and to build a future in which humans live in harmony with nature, by; conserving the world's biological diversity, ensuring that the use of renewable natural resources is sustainable, and promoting the reduction of pollution and wasteful consumption.</p>
+    
+    <p class="p2">My name is Parth.</p>
+    <p class="p2">I live in Rajkot.</p>
+    <p class="p2">My best friend is ....</p>
+
+    <h1 class="h1" align="center">Hover It!</h1>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!-- 1. WAP in JavaScript to make simple calculator using popup box.(A) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n1 = parseInt(prompt("Enter Number 1:"))
+        let n2 = parseInt(prompt("Enter Number 2:"))
+        let operator = prompt("Enter Operator (+, -, *, /):")
+        switch (operator) {
+            case "+":
+                document.write("Addition is:"+(n1+n2))
+                break;
+
+            case "-":
+                document.write("Subtraction is:"+(n1-n2))
+                break;
+            
+            case "*":
+                document.write("Multiplication is:"+(n1*n2))
+                break;
+
+            case "/":
+                document.write("Division is:"+(n1/n2))
+                break;
+        
+            default:
+                document.write("invalid choice")
+                break;
+        }
+    </script>
+</body>
+</html>

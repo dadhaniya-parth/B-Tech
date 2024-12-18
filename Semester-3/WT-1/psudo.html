@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSUDO</title>
+    <style>
+        /* unvisited link */
+        a:link {
+          color: red;
+        }
+        
+        /* visited link */
+        a:visited {
+          color: green;
+        }
+        
+        /* mouse over link */
+        a:hover {
+          color: hotpink;
+        }
+        
+        /* selected link */
+        a:active {
+          color: blue;
+        }
+        p {
+  display: none;
+  background-color: yellow;
+  padding: 20px;
+}
+
+div:hover p {
+  display: block;
+}
+        </style>
+</head>
+<body>
+    <h2>Styling a link depending on state</h2>
+
+<b><a href="default.asp" target="_blank">This is a link</a></b><br>
+<div>Hover over this div element to show the p element
+    <p>Tada! Here I am!</p>
+  </div>
+
+</body>
+</html>

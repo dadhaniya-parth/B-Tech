@@ -1,0 +1,4 @@
+1,Parth,21020201033,9876543210,Computer Science,9.0
+2,Vansh,21020201032,8765432109,Electrical Engineering,4.7
+3,Anshil,21020201031,7654321098,Mechanical Engineering,8.8
+4,Het,21020201034,6543210987,Civil Engineering,9.2

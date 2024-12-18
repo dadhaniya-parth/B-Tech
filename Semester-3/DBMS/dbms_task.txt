@@ -1,0 +1,127 @@
+Codeshare logo
+ ShareSign UpLog In
+14
+        
+15
+        
+16
+        
+17
+        
+18
+        db.Student.insertMany([
+19
+    { Rno: 101, Name: 'DEEP', Branch: 'CSE', FailedinSub: ['DBMS', 'DS'] },
+20
+    { Rno: 102, Name: 'DARSHAN', Branch: 'ME', FailedinSub: 'DS' },
+21
+    { Rno: 103, Name: 'TIRTH', Branch: 'EC', FailedinSub: 'CN' },
+22
+    { Rno: 104, Name: 'NAKUL', Branch: 'IT', FailedinSub: 'OS' }
+23
+]);
+24
+​
+25
+​
+26
+db.Employee.insertMany([
+27
+    { Eid: 101, Name: 'DEEP', Department: 'CSE', Salary: 50000, 
+28
+        Address:
+29
+         { add1: "A303-Sankheshwar",
+30
+                 add2: "Behind Nageshwar Jain temple", 
+31
+                add3: "Near Ghanteshwar", 
+32
+                Pincode: 360004, 
+33
+                City: "Rajkot" 
+34
+        }
+35
+         },
+36
+    { Eid: 102, Name: 'TIRTH', Department: 'ME', Salary: 10000, Address: { add1: "Sneha", add2: "Near Film city", add3: "Opp. Galaxy mall", Pincode: 550001, City: "Mumbai" } },
+37
+​
+38
+Set -1
+39
+//Query 1: Retrive Student list with  Failed Subject.
+40
+//Query 2: Retrive Students who Failed in 'DS'.
+41
+​
+42
+//Query 3: Retrive Students who belongs to Branch 'ME' and Failed in 'DS' Subject.
+43
+//Query 4: Add Subject 'DS' as FailedinSub where Rno is 103.
+44
+//Query 5: Remove Subject 'DS' from FailedinSub where Rno is 101.
+45
+​
+46
+​
+47
+​
+48
+​
+49
+Set -2
+50
+//Query 1: Retrive Employees with details who belongs to 'Morbi'.
+51
+//Query 2: Retrive Employees who lives at '420801' Pincode and Salary is Greater than '15000';
+52
+//Query 3: Update add2 to 'Gokuldham Society' where Eid is 101.
+53
+//Query 4: Remove add3 from Employee Collection
+54
+//Query 5: Rename add1 as 'Streetname' and add2 as 'Areaname'
+55
+//Query 6: Add JoiningDate for all Employees 
+56
+//Query 7: Rename Employee City where city = 'Jamnagar'
+57
+​
+58
+​
+59
+​
+60
+db.createCollection('student',)
+61
+​
+62
+capped
+63
+autoIndex
+64
+size
+65
+max
+66
+​
+67
+​
+68
+​
+69
+​
+70
+​
+71
+​
+72
+​
+73
+​
+
+
+
+
+Hide Ads

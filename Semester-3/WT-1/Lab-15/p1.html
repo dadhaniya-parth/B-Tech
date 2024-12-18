@@ -1,0 +1,43 @@
+<!-- 1. Write a jQuery script that animates the button to move 200 pixels to the right when clicked. (A) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Of Button</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        #animateButton {
+            position: relative;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #animateButton:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <button id="animateButton">Click me to move</button>
+    <script>
+        $(document).ready(function () {
+            $('#animateButton').click(function () {
+                $(this).animate({
+                    left: '+=200px'
+                }, 500); 
+            });
+        });
+
+    </script>
+</body>
+</html>

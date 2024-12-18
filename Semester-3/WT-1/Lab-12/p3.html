@@ -1,0 +1,25 @@
+<!-- 3. WAP to recognize which keyboard event is fired. (A) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Board Events</title>
+</head>
+<body>
+    <center>
+        <input type="text" id="keydemo">
+        <p id="text"></p>
+        <script>
+            let kdemo = document.getElementById("keydemo")
+            kdemo.addEventListener("keydown", keyDemo)
+            kdemo.addEventListener("keypress", keyDemo)
+            kdemo.addEventListener("keyup", keyDemo)
+            function keyDemo(event){
+                document.getElementById('text').innerText=event.type
+            }
+        </script>
+    </center>
+</body>
+</html>

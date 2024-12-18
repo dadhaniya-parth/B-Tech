@@ -1,0 +1,40 @@
+<!-- Write a JavaScript that uses a loop that searches a word in sentence 
+held in an array, returning the index of the word. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentence Index</title>
+</head>
+
+<body>
+    <script>
+        const sentence = prompt("Enter Sentence:")
+        const wordToFind = prompt("Enter Word for find:")
+
+        let index = -1;
+
+        for (let i = 0; i < sentence.length; i++) {
+            if (sentence[i] === wordToFind[0]) {
+                let match = true;
+                for (let j = 0; j < wordToFind.length; j++) {
+                    if (sentence[i + j] !== wordToFind[j]) {
+                        match = false;
+                        break;
+                    }
+                }
+                if (match) {
+                    index = i;
+                    break;
+                }
+            }
+        }
+
+        console.log(index); 
+    </script>
+</body>
+
+</html>
