@@ -1,0 +1,29 @@
+<!-- 1. Demonstrate the use of array to find maximum number. (A) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximum Number</title>
+</head>
+<body>
+    <h1>Find Maximum Number From Array</h1>
+    <script>
+        let myArray=[]
+        let size = parseInt(prompt("Enter Size Of Array:"))
+
+        for (let i = 0; i < size; i++) {
+            myArray[i] = prompt(`Please Enter ${i}s value:`)
+        }
+        let max = myArray[0];
+        for (let i = 1; i < size; i++) {
+            if (myArray[i] > max) {
+                max = myArray[i];
+                }
+            }
+        document.write(`Array is:${myArray}`)
+        document.write("<br>")
+        document.write(`Max Value is:${max}`)      
+    </script>
+</body>
+</html>

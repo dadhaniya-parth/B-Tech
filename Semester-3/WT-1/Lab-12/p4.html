@@ -1,0 +1,24 @@
+<!-- 4. WAP to recognize which form event is fired. (A) -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Event Recognition</title>
+</head>
+<body>
+  <form id="myForm">
+    <input type="text" id="name" placeholder="Enter your name"><br><br>
+    <button type="submit">Submit</button>
+    <p id="text"></p>
+  </form>
+
+  <script>
+    const form = document.getElementById('myForm');
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault(); 
+      document.getElementById('text').innerText="Submit"
+    });
+  </script>
+</body>
+</html>

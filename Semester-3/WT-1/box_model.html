@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            margin: auto;
+            width: 80%;
+            border: 1px solid;
+        }
+        .heading{
+            margin: 10px;
+            align-content: center;
+            background-color: black;
+        }
+        .heading h1{
+            color: white;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        .main{
+            margin: 10px;
+            border: 1px solid;
+            display: flex;
+            width: auto;
+        }
+        .content{
+            margin: 10px;
+            padding: 10px;
+            background-color: lightgray;
+            float: left;
+            width: 70%;
+        }
+        .sidebar{
+            margin: 10px;
+            padding: 10px;
+            background-color: rgb(186, 246, 246);
+            float: right;
+            width: 30%;
+        }
+        .footer{
+            margin: 10px;
+            align-content: center;
+            background-color: black;   
+        }
+        .footer p{
+            color: white;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        @media only screen and (min-width: 400px) {
+            .container{
+                display:block;
+            }
+        }
+        @media only screen and (min-width: 1920px) {
+            .content{
+                width: 100%;
+            }
+            .sidebar{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <div class="container">
+        <div class="heading">
+            <h1>Welcome to My Website</h1>
+        </div>
+        <div class="main">
+            <div class="content">
+                <h2>Content Scetion</h2>
+                <p>Cascading Style Sheets (CSS) is a style sheet language use to create a Website.</p>
+            </div>
+            <div class="sidebar">
+                <h2>Sidebar</h2>
+                <p>This is sidebar with attachment css properties.</p>
+            </div>
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 My Website</p>
+        </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!-- 1. WAP to create a basic graphical Calculator using HTML and JavaScript.(A) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="button"] {
+            margin-left: 10px;
+            margin-right: 10px;
+            width: 30px;
+            margin-bottom: 10px;
+            border: none;
+            background-color: grey;
+        }
+        #input {
+            width: 160px;
+            padding: 15px;
+            margin-left: 10px;
+        }
+        .div{
+            border: 2px solid;
+            width: 12%;
+            padding: 16px;
+            margin-left: 840px;
+            background-color: chocolate;
+        }
+        table{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="div" style="align-content: center;">
+    <table align="center">
+        <tr>
+            <td colspan="4"><input type="text" id="input" disabled></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="appendchar('7')"></td>
+            <td><input type="button" value="8" onclick="appendchar('8')"></td>
+            <td><input type="button" value="9" onclick="appendchar('9')"></td>
+            <td><input type="button" value="C" onclick="clearContent()"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="appendchar('4')"></td>
+            <td><input type="button" value="5" onclick="appendchar('5')"></td>
+            <td><input type="button" value="6" onclick="appendchar('6')"></td>
+            <td><input type="button" value="+" onclick="appendchar('+')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="appendchar('1')"></td>
+            <td><input type="button" value="2" onclick="appendchar('2')"></td>
+            <td><input type="button" value="3" onclick="appendchar('3')"></td>
+            <td><input type="button" value="-" onclick="appendchar('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="0" onclick="appendchar('0')"></td>
+            <td><input type="button" value="*" onclick="appendchar('*')"></td>
+            <td><input type="button" value="/" onclick="appendchar('/')"></td>
+            <td><input type="button" value="=" onclick="cal()"></td>
+    </table>
+    <script>
+        var currentValue = ""
+        function appendchar(char) {
+            currentValue += char
+            document.getElementById('input').value = currentValue
+        }
+        function clearContent() {
+            currentValue=''
+            document.getElementById('input').value = currentValue
+        }
+        function cal() {
+            try{
+                result=eval(currentValue)
+            document.getElementById('input').value = result
+            }
+        catch{
+            document.getElementById('input').value = "error"
+        }
+        }
+    </script>
+    </div>
+</body>
+</html>

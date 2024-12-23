@@ -1,0 +1,84 @@
+<!-- 1. Perform basic interpolation (A)
+2. Perform interpolation with pipes (A)
+3. Demonstrate property binding in Angular (A) -->
+
+<h1 style="color: blue;">Interpolation</h1>
+
+<hr>
+
+<h3>{{title}}</h3>
+
+<hr>
+
+<h2 style="color: red;">Interpolation with case-pipe</h2>
+<h3>{{title | uppercase}}</h3>
+
+<hr>
+
+<h2 style="color: red;">Interpolation with json-pipe</h2>
+<h3>{{stuData | json}}</h3>
+
+<hr>
+
+<h2 style="color: red;">Interpolation with date-pipe(11/12/24)</h2>
+<h3>{{d  | date:'MM/dd/yy'}}</h3>
+
+<hr>
+
+<h2 style="color: red;">Interpolation with date-pipe(11/12/2024)</h2>
+<h3>{{d  | date:'MM/dd/yyyy'}}</h3>
+
+<hr>
+
+<h2 style="color: red;">Interpolation with deciaml-pipe</h2>
+<h3>{{number| number:'3.2-2'}}</h3>
+
+<hr>
+
+<h2 style="color: red;">Interpolation with property binding to give static value</h2>
+<input type="text" value="{{title}}">
+
+<hr>
+
+
+<h1 style="color: blue;">Practice Of Date Pipe</h1>
+
+<hr>
+
+<h2 style="color: red;">24-hour format with second: 14:45:30</h2>
+<h3>{{d  | date:'HH:mm:ss'}}</h3>
+
+<hr>
+
+<h2 style="color: red;">12-hour format with AM/PM and seconds: 2:45:30 PM</h2>
+<h3>{{d  | date:'h:mm:ss a'}}</h3>
+
+<hr>
+
+<h2 style="color: red;">Custom 24-hour format with milliseconds: 14:45:30.123</h2>
+<h3>{{d  | date:'HH:mm:ss.SSS'}}</h3>
+
+<hr>
+
+<h2 style="color: red;">Custom 12-hour format with milliseconds and AM/PM: 2:45:30.123 PM</h2>
+<h3>{{d  | date:'h:mm:ss.SSS a'}}</h3>
+
+<hr>
+
+<h2 style="color: red;">Hour and Minutes only (24-hour format) : 14:45</h2>
+<h3>{{d  | date:'HH:mm'}}</h3>
+
+<hr>
+
+<h2 style="color: red;">Hour and Minutes only (12-hour format with AM/PM) : 2:45 PM</h2>
+<h3>{{d  | date:'h:mm a'}}</h3>
+
+<hr>
+
+<h1 style="color: blue;">Practice Of Number Pipe</h1>
+
+<hr>
+
+<h2 style="color: red;">Rounded to 3 Decimal: 9,876,543.219</h2>
+
+<h2 style="color: red;">Scientific Notation: 9.88e+6</h2>

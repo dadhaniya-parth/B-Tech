@@ -1,0 +1,47 @@
+<!-- 4. When a list item is clicked, change its background color to yellow and slide it up, then fade it out. (B) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation List</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        #myList li {
+            transition: background-color 0.3s ease,
+                transform 0.3s ease,
+                opacity 0.3s ease;
+                cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="myList">
+        <li>Parth</li>
+        <li>Vivek</li>
+        <li>Rushi</li>
+    </ul>
+    <p></p>
+    <script>
+        $(document).ready(function () {
+            $('#myList li').click(function () {
+                $(this).css({
+                    backgroundColor: 'yellow',
+                    transform: 'translateY(-100%)',
+                    opacity: 0
+                });
+
+                setTimeout(function () {
+                    $(this).remove();
+                }, 500); 
+                $('p').text("You Clicked :: "+$(this).text())
+            });
+        });
+    </script>
+</body>
+
+</html>

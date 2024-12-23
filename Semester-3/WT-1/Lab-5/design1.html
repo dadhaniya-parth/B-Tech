@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design 1</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            padding-top: 20px;
+            margin: auto;
+            width: 60%;
+        }
+        .header{
+            width: 100%;
+            height: auto;
+            display: flex;
+            overflow: hidden;
+        }
+        .logo{
+            width: 30%;
+            float: left;
+            border: 1px solid red;
+            padding-left: 10px;
+        }
+        .link{
+            padding: auto;
+            width: 70%;
+            float: right;
+            padding-left: 10px;
+            padding-top: 20px;
+            border: 1px solid blue;
+        }
+        .link a{
+            padding: 20px;
+        }
+        .main{
+            width: 100%;
+            display: flex;
+            height: auto;
+        }
+        .sidebar{
+            border: 1px solid orangered;
+            width: 35%;
+            float: left;
+        }
+        .content{
+            border: 1px solid green;
+            width: 75%;
+            float: right;
+        }
+        .side-content{
+            border: 1px solid gray;
+            text-align: center;
+            width: 90%;
+            padding-block: 10px;
+            margin: 80px auto;
+        }
+        .contentdemo{
+            border: 1px solid purple;
+            margin: 100px;
+            width: 75%;
+            height: auto;
+            display: flex;
+        }
+        .rectangle{
+            border: 1px dotted red;
+            height: 100px;
+            width: 50%;
+            margin: 50px;
+        }
+        .footer{
+            text-align: center;
+            padding-top: 20px;
+            border: 1px solid blue;
+            height: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <p>Logo Here</p>
+            </div>
+            <div class="link">
+                <a href="#" style="padding-left: 20px;">Home</a>
+                <a href="#" style="padding-left: 20px;">About</a>
+                <a href="#" style="padding-left: 20px;">Contact</a>
+            </div>
+        </div>
+        <div class="main">
+            <div class="sidebar">
+                <div class="side-content">RESULT</div>
+                <div class="side-content">APPLY</div>
+                <div class="side-content">PLACEMENT</div>
+                <div class="side-content">RECRUTMENT</div>
+                <div class="side-content">NEWS</div>
+            </div>
+            <div class="content">
+                <div class="contentdemo">
+                    <div class="rectangle"></div>
+                    <div class="rectangle"></div>
+                </div>
+                <div class="contentdemo">
+                    <div class="rectangle"></div>
+                    <div class="rectangle"></div>
+                    <div class="rectangle"></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            Footer
+        </div>
+    </div>
+</body>
+</html>

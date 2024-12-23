@@ -1,0 +1,31 @@
+<!-- Demonstrate the Array and Object Destructuring. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Destructuring Example</title>
+</head>
+<body>
+    <h1>Array and Object Destructuring in JavaScript</h1>
+    <p id="array-output"></p>
+    <p id="object-output"></p>
+
+    <script>
+        let fruits = ["Apple", "Banana", "Cherry"];
+        let [firstFruit, secondFruit] = fruits;
+
+        let person = {
+            name: "John",
+            age: 30,
+            city: "New York"
+        };
+        let {name, age, city} = person;  
+
+        let arrayOutput = document.getElementById("array-output");
+        arrayOutput.innerHTML = `Array Destructuring: <br>First fruit: ${firstFruit}<br>Second fruit: ${secondFruit}`;
+
+        let objectOutput = document.getElementById("object-output");
+        objectOutput.innerHTML = `Object Destructuring: <br>Name: ${name}<br>Age: ${age}<br>City: ${city}`;
+    </script>
+</body>
+</html>

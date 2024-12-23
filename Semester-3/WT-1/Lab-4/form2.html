@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid 19 Registration Form</title>
+    <style>
+        td{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>COVID-19 Vaccine Registration Form</h1>
+        <form action="#" method="post">
+            <table>
+                <tr>
+                    <td><label for="fname">First Name</label></td>
+                    <td><input type="text" name="fname" id="fname"></td>
+                </tr>
+                <tr>
+                    <td><label for="lname">Last Name</label></td>
+                    <td><input type="text" name="lname" id="lname"></td>
+                </tr>
+                <tr>
+                    <td><label for="adhar">Aadhar Number</label></td>
+                    <td><input type="text" name="adhar" id="adhar"></td>
+                </tr>
+                <tr>
+                    <td><label for="vn">Vaccine Name</label></td>
+                    <td>
+                        <select name="vn" id="vn">
+                            <option value="" selected disabled>Please Select Vaccine Name</option>
+                            <option value="Covaxin">Covaxin</option>
+                            <option value="Covishield">Covishield</option>
+                            <option value="Sputnik-V">Sputnik-V</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="vcn">Vaccine Center Name</label></td>
+                    <td>
+                        <select name="vcn" id="vcn">
+                            <option value="" selected disabled>Please Select Vaccine Center Name</option>
+                            <option value="Rajkot">Rajkot</option>
+                            <option value="Morbi">Morbi</option>
+                            <option value="Junagadh">Junagadh</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="dod">Date of Dose</label></td>
+                    <td><input type="date" name="dod" id="dod"></td>
+                </tr>
+                <tr>
+                    <td><label for="dn">Dose Number</label></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="button" value="CLICK HERE" name="clickhere">
+                        <input type="button" value="Cancel" name="cancel">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+</html>

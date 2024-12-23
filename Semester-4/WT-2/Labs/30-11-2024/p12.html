@@ -1,0 +1,25 @@
+<!-- Demonstrate the default parameter while using a function. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Default Parameter Example</title>
+</head>
+<body>
+    <h1>Default Parameter in JavaScript</h1>
+    <p id="output"></p>
+
+    <script>
+        function greet(name = "Guest") {
+            return `Hello, ${name}!`;
+        }
+
+        let message1 = greet();
+        
+        let message2 = greet("Alice");
+
+        let output = document.getElementById("output");
+        output.innerHTML = `<p>Message 1: ${message1}</p><p>Message 2: ${message2}</p>`;
+    </script>
+</body>
+</html>

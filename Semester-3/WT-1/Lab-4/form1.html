@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        td{
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Student Registration</h1>
+        <form action="#" method="post">
+            <table style="cell-Spacing:10px">
+                <tr>
+                    <td><label for="fname">Full Name</label></td>
+                    <td><input type="text" name="fname" id="fname"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td><input type="email" name="email" id="email"></td>
+                </tr>
+                <tr>
+                    <td><label for="mno">Mobile No</label></td>
+                    <td><input type="number" max="10" name="mno" id="mno"></td>
+                </tr>
+                <tr>
+                    <td><label for="address">Address</label></td>
+                    <td><textarea name="address" id="address" cols="20"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="nation">Nationality</label></td>
+                    <td><input type="text" name="nation" id="nation"></td>
+                </tr>
+                <tr>
+                    <td><label for="dob">Date Of Birth</label></td>
+                    <td><input type="date" name="dob" id="dob"></td>
+                </tr>
+                <tr>
+                    <td><label for="gender">Gender</label></td>
+                    <td>
+                        <input type="radio" name="gender" id="Male">
+                        <label for="Male">Male</label>
+                        <input type="radio" name="gender" id="Female">
+                        <label for="Female">Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="hd">Highest Degree</label></td>
+                    <td>
+                        <select name="hd" id="hd">
+                            <option value="" selected disabled>Select Degree</option>
+                            <option value="High School">High School</option>
+                            <option value="Primary School">Primary School</option>
+                            <option value="Bachler Degree">Bachler Degree</option>
+                            <option value="Master Degree">Master Degree</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="cpi">CPI</label></td>
+                    <td><input type="text" name="cpi" id="cpi"></td>
+                </tr>
+                <tr>
+                    <td><label for="uni">University</label></td>
+                    <td><input type="text" name="uni" id="uni"></td>
+                </tr>
+                <tr>
+                    <td><label for="py">Passing Year</label></td>
+                    <td>
+                        <select name="py" id="py">
+                            <option value="" selected disabled>Select Your Passing Year</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="button" value="Submit" name="submit">
+                        <input type="button" value="Cancel" name="cancel">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+</html>
